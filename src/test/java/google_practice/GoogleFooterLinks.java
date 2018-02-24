@@ -43,7 +43,8 @@ public class GoogleFooterLinks {
 		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("Privacy"));
 
 		Thread.sleep(6000);
-	
+		
+		// Test-1 Privacy link ends here
 
 	
 		
