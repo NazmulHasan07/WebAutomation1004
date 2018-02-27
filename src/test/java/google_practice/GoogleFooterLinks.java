@@ -33,16 +33,16 @@ public class GoogleFooterLinks {
 
 		GoogleLinks.findElement(By.linkText("Privacy")).click();
 		System.out.println("I clicked on the Privacy link.");
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 
-		if(GoogleLinks.getPageSource().contains("Privacy"))
-			System.out.println("The test is passed");
+		if(GoogleLinks.getPageSource().contains("When you use Google services, you trust us with your information."))
+			System.out.println("The Privacy test is passed");
 		else
-			System.out.println("The test is failed");
+			System.out.println("The Privacy test is failed");
 
-		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("Privacy"));
+		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("When you use Google services, you trust us with your information"));
 
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		
 		// Test-1 Privacy link ends here
 
@@ -55,16 +55,16 @@ public class GoogleFooterLinks {
 
 		GoogleLinks.findElement(By.linkText("Terms")).click();
 		System.out.println("I clicked on the Terms link.");
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 
-		if(GoogleLinks.getPageSource().contains("Terms"))
-			System.out.println("The test is passed");
+		if(GoogleLinks.getPageSource().contains("Thanks for using our products and services (“Services”)."))
+			System.out.println("The Terms test is passed");
 		else
-			System.out.println("The test is failed");
+			System.out.println("The Terms test is failed");
 
-		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("Terms"));
+		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("Thanks for using our products and services (“Services”)."));
 
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 
 		
 		// Test-2 Terms link ends here
@@ -79,19 +79,24 @@ public class GoogleFooterLinks {
 
 		GoogleLinks.findElement(By.linkText("Settings")).click();
 		System.out.println("I clicked on the Settings link.");
-		Thread.sleep(6000);
+		GoogleLinks.findElement(By.linkText("Search settings")).click();
+		System.out.println("I clicked on the Search settings link.");
+		
 
-		if(GoogleLinks.getPageSource().contains("Settings"))
-			System.out.println("The test is passed");
+		
+		Thread.sleep(2000);
+
+		if(GoogleLinks.getPageSource().contains("The SafeSearch filter isn’t 100% accurate, but it helps you avoid most violent and adult content."))
+			System.out.println("The Settings test is passed");
 		else
-			System.out.println("The test is failed");
+			System.out.println("The Settings test is failed");
 
-		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("Settings"));
+		Assert.assertEquals(true, GoogleLinks.getPageSource().contains("The SafeSearch filter isn’t 100% accurate, but it helps you avoid most violent and adult content."));
 
 
 		// Test-3 Settings link ends here
 
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		GoogleLinks.close();
 	}
 
